@@ -40,6 +40,7 @@ public class Main {
             }
             else{
                 System.out.println("Your username or password is incorrect. ");
+                check1="";
             }
         }
          if(login==2){
