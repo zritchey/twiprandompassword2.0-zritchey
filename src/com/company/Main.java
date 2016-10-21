@@ -8,7 +8,7 @@ public class Main {
             Scanner kb=new Scanner(System.in);
             System.out.print("Choose your username: ");
             String uName=kb.nextLine();
-            while (uName.indexOf(" ")>0){
+            while (uName.trim().length()<0){
                 System.out.print("Spaces aren't allowed in usernames.\nPlease enter a new username: ");
                 uName=kb.next();
             }

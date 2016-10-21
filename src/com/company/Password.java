@@ -7,18 +7,18 @@ import java.util.Random;
  */
 class Password {
 
-    private String generate;
+
     private String pass;
     private int a[]=new int[16];
 
     public Password() {
-        generate = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*";
+
 
     }
     private void numgen(){
         int j = 0;
         while (j < 16) {
-            a[j] = new Random().nextInt(70);
+            a[j] = new Random().nextInt(92);
             j++;
         }
     }
@@ -27,11 +27,12 @@ class Password {
         int j=0;
         pass="";
         while (j<16){
-            pass=pass+generate.substring(a[j],a[j]+1);
+            pass=pass+((char)(a[j]+33));
             j++;
         }
         return pass;
     }
+
 
 
 }
